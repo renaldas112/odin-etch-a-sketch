@@ -11,9 +11,8 @@ function defaultGrid() {
   makeColumns(16);
 }
 
-//Takes (rows, columns) input and makes a grid
+//Creates rows
 function makeRows(rowNum) {
-  //Creates rows
   for (r = 0; r < rowNum; r++) {
     let row = document.createElement("div");
     container.appendChild(row).className = "grid__container--grid-row";
@@ -25,7 +24,7 @@ function makeColumns(cellNum) {
   for (i = 0; i < rows.length; i++) {
     for (j = 0; j < cellNum; j++) {
       let newCell = document.createElement("div");
-      rows[j].appendChild(newCell).className = "grid__container--grid-cell";
+      rows[j].appendChild(newCell).className = "grid__container--grid-cell change-color";
     }
   }
 }

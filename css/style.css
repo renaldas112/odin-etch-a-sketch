@@ -6,6 +6,10 @@
   font-family: "ARCADECLASSIC";
 }
 
+.red {
+  background-color: red;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,4 +57,10 @@ main .main__container--right .grid__container--grid-cell {
   min-height: 20px;
   display: inline-block;
   margin-right: 2px;
+}
+main .main__container--right .grid__container .change-color {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }

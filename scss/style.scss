@@ -17,6 +17,10 @@
   flex-basis: $flex-basis;
 }
 
+.red {
+  background-color: red;
+}
+
 main {
   @include flex;
 
@@ -55,6 +59,9 @@ main {
           min-height: 20px;
           display: inline-block;
           margin-right: 2px;
+        }
+        .change-color {
+          user-select: none;
         }
       }
     }

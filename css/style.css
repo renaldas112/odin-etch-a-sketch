@@ -1,4 +1,48 @@
-.cell {
+@font-face {
+  font-family: "ARCADECLASSIC";
+  src: url(../fonts/arcadeclassic/ARCADECLASSIC.TTF) format("truetype");
+}
+* {
+  font-family: "ARCADECLASSIC";
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .main__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .main__container .main__title {
+  font-weight: 100;
+  word-spacing: 5px;
+}
+main .main__container--left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background-color: antiquewhite;
+}
+main .main__container--right {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background-color: aqua;
+}
+main .main__container--right .grid__container {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+main .main__container--right .grid__container--grid-cell {
   border: 1px solid gray;
   min-width: 20px;
   min-height: 20px;

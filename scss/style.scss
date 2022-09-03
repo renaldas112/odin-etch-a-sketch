@@ -1,9 +1,56 @@
 @import "_var.scss";
 
-.cell {
-    border: 1px solid gray;
-    min-width: 20px;
-    min-height: 20px;
-    display: inline-block;
-    margin-right: 2px;
+@font-face {
+  font-family: "ARCADECLASSIC";
+  src: url(../fonts/arcadeclassic/ARCADECLASSIC.TTF) format("truetype");
+}
+
+* {
+  font-family: "ARCADECLASSIC";
+}
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-basis {
+  flex-basis: $flex-basis;
+}
+
+main {
+  @include flex;
+
+  .main__container {
+    @include flex;
+    flex-direction: column;
+
+    .main__title {
+      font-weight: 100;
+      word-spacing: 5px;
+    }
+
+    &--left {
+      @include flex;
+      @include flex-basis;
+      background-color: antiquewhite;
+    }
+
+    &--right {
+      @include flex-basis;
+      background-color: aqua;
+
+      .grid__container {
+        padding: 10px;
+        box-sizing: border-box;
+
+        &--grid-cell {
+          border: 1px solid gray;
+          min-width: 20px;
+          min-height: 20px;
+          display: inline-block;
+          margin-right: 2px;
+        }
+      }
+    }
   }
+}

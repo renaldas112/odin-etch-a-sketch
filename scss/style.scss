@@ -31,8 +31,11 @@ main {
       margin: 0;
     }
 
+    .main__buttons-container {
+      align-items: flex-start;
+    }
+
     &--left {
-      @include flex;
       @include flex-basis;
       padding: 10px;
       background-color: antiquewhite;

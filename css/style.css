@@ -6,10 +6,6 @@
   font-family: "ARCADECLASSIC";
 }
 
-.red {
-  background-color: red;
-}
-
 main {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -17,10 +17,6 @@
   flex-basis: $flex-basis;
 }
 
-.red {
-  background-color: red;
-}
-
 main {
   @include flex;
 

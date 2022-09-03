@@ -12,16 +12,18 @@ const cellColor = document.querySelectorAll("div.change-color");
 
 const inputColorMode = document.getElementById("colormode");
 
-let theColor = 0;
+//default color = #ff0000 (red)
+let theColor = "#ff0000";
 
 inputColorMode.addEventListener(
   "input",
   function () {
     theColor = inputColorMode.value;
   },
-  false
 );
 
 cellColor.forEach((changeColor) => {
-  changeColor.addEventListener("mouseover", () => (changeColor = theColor.valueOf));
+  changeColor.addEventListener("mouseover", (changeColor) =>  {
+    changeColor.target.style.backgroundColor = theColor;
+  });
 });

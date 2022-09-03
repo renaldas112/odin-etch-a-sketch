@@ -21,8 +21,10 @@ main .main__container {
           flex-direction: column;
 }
 main .main__container .main__title {
+  font-size: 2.5rem;
   font-weight: 100;
   word-spacing: 5px;
+  margin: 0;
 }
 main .main__container--left {
   display: -webkit-box;
@@ -30,6 +32,7 @@ main .main__container--left {
   display: flex;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  padding: 10px;
   background-color: antiquewhite;
 }
 main .main__container--right {

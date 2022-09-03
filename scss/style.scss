@@ -25,13 +25,16 @@ main {
     flex-direction: column;
 
     .main__title {
+      font-size: 2.5rem;
       font-weight: 100;
       word-spacing: 5px;
+      margin: 0;
     }
 
     &--left {
       @include flex;
       @include flex-basis;
+      padding: 10px;
       background-color: antiquewhite;
     }
 

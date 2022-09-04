@@ -10,7 +10,9 @@
   <body>
     <header>
       <h1 class="header__text header__text--title">Etch a Sketch</h1>
-      <h2 class="header__text header__text--subtitle">Pick a color and start drawing</h2>
+      <h2 class="header__text header__text--subtitle">
+        Pick a color and start drawing
+      </h2>
     </header>
     <main>
       <section class="main__container main__container--left">
@@ -20,13 +22,16 @@
           <button type="button" class="btn rainbow-mode">rainbow</button>
           <button type="button" class="btn eraser">eraser</button>
           <button type="button" class="btn clear">clear</button>
+          <button type="button" class="btn btn-size grid-4x4">4 x 4</button>
+          <button type="button" class="btn btn-size grid-8x8">8 x 8</button>
+          <button type="button" class="btn btn-size grid-16x16">16 x 16</button>
+          <button type="button" class="btn btn-size grid-32x32">32 x 32</button>
         </article>
       </section>
       <section class="main__container main__container--right">
-        <div id="container" class="grid__container"></div>
+        <div class="container"></div>
       </section>
     </main>
-    <script type="text/javascript" defer src="grid.js"></script>
     <script type="text/javascript" defer src="script.js"></script>
   </body>
 </html>

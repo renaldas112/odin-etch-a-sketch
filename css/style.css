@@ -44,7 +44,7 @@ main .main__container {
           flex-direction: column;
 }
 main .main__container--left {
-  padding: 10px 50px;
+  padding: 0 50px;
 }
 main .main__container--left .main__buttons-container {
   -webkit-box-align: start;
@@ -54,6 +54,12 @@ main .main__container--left .main__buttons-container {
       -ms-flex-pack: center;
           justify-content: center;
   width: 150px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 main .main__container--left .main__buttons-container input[type=color] {
   -webkit-appearance: none;
@@ -84,25 +90,9 @@ main .main__container--left .main__buttons-container .btn:hover {
   background: linear-gradient(180deg, hsl(0deg, 90%, 27%) 0rem, hsl(0deg, 90%, 27%) 0.25rem, transparent 0.25rem, transparent calc(100% - 0.25rem), hsl(0deg, 70%, 47%) calc(100% - 0.25rem)), linear-gradient(90deg, hsl(0deg, 90%, 27%) 0rem, hsl(0deg, 90%, 27%) 0.25rem, transparent 0.25rem, transparent calc(100% - 0.25rem), hsl(0deg, 70%, 47%) calc(100% - 0.25rem)), hsl(0deg, 80%, 37%);
   padding: 3px 0 0 3px;
 }
-main .main__container--right {
-  background-color: #ffffff;
+main .main__container--left .main__buttons-container .btn-size {
+  width: 75px;
 }
-main .main__container--right .grid__container {
-  width: 100%;
-  padding: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0 auto;
-}
-main .main__container--right .grid__container--grid-cell {
-  min-width: 20px;
-  min-height: 20px;
-  display: inline-block;
-  margin-right: 2px;
-}
-main .main__container--right .grid__container .change-color {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+main .main__container--left .main__buttons-container .slider-text {
+  color: #fff;
 }

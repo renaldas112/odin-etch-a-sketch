@@ -1,5 +1,5 @@
-@import '_var.scss';
-@import '_header.scss';
+@import "_var.scss";
+@import "_header.scss";
 
 @font-face {
   font-family: "ARCADECLASSIC";
@@ -11,7 +11,7 @@
 }
 
 body {
-  background: url('../images/background.png');
+  background: url("../images/background.png");
 }
 
 @mixin flex {
@@ -28,12 +28,14 @@ main {
     flex-direction: column;
 
     &--left {
-      padding: 10px 50px;
+      padding: 0 50px;
 
       .main__buttons-container {
         align-items: flex-start;
         justify-content: center;
         width: 150px;
+        flex-wrap: wrap;
+        flex-direction: row;
 
         input[type="color"] {
           -webkit-appearance: none;
@@ -64,28 +66,16 @@ main {
             padding: 3px 0 0 3px;
           }
         }
+        .btn-size {
+          width: 75px;
+        }
+        .slider-text {
+          color: #fff;
+        }
       }
     }
 
     &--right {
-      background-color: #ffffff;
-
-      .grid__container {
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-        margin: 0 auto;
-
-        &--grid-cell {
-          min-width: 20px;
-          min-height: 20px;
-          display: inline-block;
-          margin-right: 2px;
-        }
-        .change-color {
-          user-select: none;
-        }
-      }
     }
   }
 }

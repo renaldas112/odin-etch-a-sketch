@@ -1,1 +1,42 @@
-$flex-basis: 50%;
+$max-width: 400px;
+
+$highlight-color--lighter: hsl(0, 65%, 52%);
+$highlight-color: hsl(0, 75%, 42%);
+$highlight-color--darker: hsl(0, 85%, 32%);
+$highlight-color-hover--lighter: hsl(0, 70%, 47%);
+$highlight-color-hover: hsl(0, 80%, 37%);
+$highlight-color-hover--darker: hsl(0, 90%, 27%);
+$button-background: linear-gradient(
+    180deg,
+    $highlight-color--lighter 0rem,
+    $highlight-color--lighter 0.25rem,
+    transparent 0.25rem,
+    transparent calc(100% - 0.25rem),
+    $highlight-color--darker calc(100% - 0.25rem)
+  ),
+  linear-gradient(
+    90deg,
+    $highlight-color--lighter 0rem,
+    $highlight-color--lighter 0.25rem,
+    transparent 0.25rem,
+    transparent calc(100% - 0.25rem),
+    $highlight-color--darker calc(100% - 0.25rem)
+  ),
+  $highlight-color;
+$button-background--clicked: linear-gradient(
+    180deg,
+    $highlight-color-hover--darker 0rem,
+    $highlight-color-hover--darker 0.25rem,
+    transparent 0.25rem,
+    transparent calc(100% - 0.25rem),
+    $highlight-color-hover--lighter calc(100% - 0.25rem)
+  ),
+  linear-gradient(
+    90deg,
+    $highlight-color-hover--darker 0rem,
+    $highlight-color-hover--darker 0.25rem,
+    transparent 0.25rem,
+    transparent calc(100% - 0.25rem),
+    $highlight-color-hover--lighter calc(100% - 0.25rem)
+  ),
+  $highlight-color-hover;

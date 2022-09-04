@@ -10,6 +10,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 main .main__container {
   display: -webkit-box;
@@ -24,31 +27,63 @@ main .main__container .main__title {
   font-size: 2.5rem;
   font-weight: 100;
   word-spacing: 5px;
-  margin: 0;
-}
-main .main__container .main__buttons-container {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  margin: 10px;
 }
 main .main__container--left {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  width: 400px;
   padding: 10px;
   background-color: antiquewhite;
 }
+main .main__container--left .main__buttons-container {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+}
+main .main__container--left .main__buttons-container input[type=color] {
+  -webkit-appearance: none;
+  border: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: 5px auto;
+}
+main .main__container--left .main__buttons-container input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+main .main__container--left .main__buttons-container input[type=color]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50px;
+}
+main .main__container--left .main__buttons-container .btn {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0rem, hsl(0deg, 65%, 52%)), color-stop(0.25rem, hsl(0deg, 65%, 52%)), color-stop(0.25rem, transparent), color-stop(transparent), to(hsl(0deg, 85%, 32%))), -webkit-gradient(linear, left top, right top, color-stop(0rem, hsl(0deg, 65%, 52%)), color-stop(0.25rem, hsl(0deg, 65%, 52%)), color-stop(0.25rem, transparent), color-stop(transparent), to(hsl(0deg, 85%, 32%))), hsl(0deg, 75%, 42%);
+  background: linear-gradient(180deg, hsl(0deg, 65%, 52%) 0rem, hsl(0deg, 65%, 52%) 0.25rem, transparent 0.25rem, transparent calc(100% - 0.25rem), hsl(0deg, 85%, 32%) calc(100% - 0.25rem)), linear-gradient(90deg, hsl(0deg, 65%, 52%) 0rem, hsl(0deg, 65%, 52%) 0.25rem, transparent 0.25rem, transparent calc(100% - 0.25rem), hsl(0deg, 85%, 32%) calc(100% - 0.25rem)), hsl(0deg, 75%, 42%);
+  font-size: 1rem;
+  border: 0.125rem solid #000;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+}
+main .main__container--left .main__buttons-container .btn:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0rem, hsl(0deg, 90%, 27%)), color-stop(0.25rem, hsl(0deg, 90%, 27%)), color-stop(0.25rem, transparent), color-stop(transparent), to(hsl(0deg, 70%, 47%))), -webkit-gradient(linear, left top, right top, color-stop(0rem, hsl(0deg, 90%, 27%)), color-stop(0.25rem, hsl(0deg, 90%, 27%)), color-stop(0.25rem, transparent), color-stop(transparent), to(hsl(0deg, 70%, 47%))), hsl(0deg, 80%, 37%);
+  background: linear-gradient(180deg, hsl(0deg, 90%, 27%) 0rem, hsl(0deg, 90%, 27%) 0.25rem, transparent 0.25rem, transparent calc(100% - 0.25rem), hsl(0deg, 70%, 47%) calc(100% - 0.25rem)), linear-gradient(90deg, hsl(0deg, 90%, 27%) 0rem, hsl(0deg, 90%, 27%) 0.25rem, transparent 0.25rem, transparent calc(100% - 0.25rem), hsl(0deg, 70%, 47%) calc(100% - 0.25rem)), hsl(0deg, 80%, 37%);
+  padding: 3px 0 0 3px;
+}
 main .main__container--right {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  background-color: aqua;
+  width: 400px;
+  background-color: #ffffff;
 }
 main .main__container--right .grid__container {
   padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border: 1px solid black;
+  margin: 0 auto;
 }
 main .main__container--right .grid__container--grid-cell {
-  border: 1px solid gray;
   min-width: 20px;
   min-height: 20px;
   display: inline-block;

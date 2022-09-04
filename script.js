@@ -38,12 +38,39 @@ const rainbowMode = document.querySelector(".rainbow-mode");
 //rainbow color
 
 const toggleRainbowMode = () => {
-    cellColor.forEach((changeColor) => {
-      changeColor.addEventListener("mouseover", (changeColor) => {
-        changeColor.target.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-      });
+  cellColor.forEach((changeColor) => {
+    changeColor.addEventListener("mouseover", (changeColor) => {
+      changeColor.target.style.backgroundColor = `hsl(${
+        Math.random() * 360
+      }, 100%, 50%)`;
     });
-  };
+  });
+};
 
 //rainbow mode button
 rainbowMode.addEventListener("click", toggleRainbowMode);
+
+//eraser
+
+const eraserMode = document.querySelector(".eraser");
+
+const toggleEraserMode = () => {
+  cellColor.forEach((changeColor) => {
+    changeColor.addEventListener("mouseover", (changeColor) => {
+      changeColor.target.style.backgroundColor = "#ffffff";
+    });
+  });
+};
+
+eraserMode.addEventListener("click", toggleEraserMode);
+
+//clear mode
+
+const clearMode = document.querySelector(".clear");
+
+const toggleClearMode = () => {
+  for (let i = 0; i < cellColor.length; i++)
+    cellColor[i].style.backgroundColor = "#ffffff";
+};
+
+clearMode.addEventListener("click", toggleClearMode);

@@ -1,9 +1,15 @@
-header .header__title {
-  font-size: 2.5rem;
+header .header__text {
   font-weight: 100;
   word-spacing: 5px;
-  margin: 10px;
+  margin: 20px 0;
   color: #fff;
+  text-align: center;
+}
+header .header__text--title {
+  font-size: 5rem;
+}
+header .header__text--subtitle {
+  font-size: 2.5rem;
 }
 
 @font-face {
@@ -25,8 +31,8 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
 }
 main .main__container {
   display: -webkit-box;
@@ -38,9 +44,7 @@ main .main__container {
           flex-direction: column;
 }
 main .main__container--left {
-  width: 400px;
-  padding: 10px;
-  background-color: antiquewhite;
+  padding: 10px 50px;
 }
 main .main__container--left .main__buttons-container {
   -webkit-box-align: start;
@@ -81,14 +85,13 @@ main .main__container--left .main__buttons-container .btn:hover {
   padding: 3px 0 0 3px;
 }
 main .main__container--right {
-  width: 400px;
   background-color: #ffffff;
 }
 main .main__container--right .grid__container {
+  width: 100%;
   padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid black;
   margin: 0 auto;
 }
 main .main__container--right .grid__container--grid-cell {

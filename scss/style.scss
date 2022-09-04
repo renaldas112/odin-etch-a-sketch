@@ -1,4 +1,5 @@
-@import "_var.scss";
+@import '_var.scss';
+@import '_header.scss';
 
 @font-face {
   font-family: "ARCADECLASSIC";
@@ -9,6 +10,10 @@
   font-family: "ARCADECLASSIC";
 }
 
+body {
+  background: url('../images/background.png');
+}
+
 @mixin flex {
   display: flex;
 }
@@ -16,17 +21,11 @@
 main {
   @include flex;
   justify-content: center;
+  transform: translateY(50%);
 
   .main__container {
     @include flex;
     flex-direction: column;
-
-    .main__title {
-      font-size: 2.5rem;
-      font-weight: 100;
-      word-spacing: 5px;
-      margin: 10px;
-    }
 
     &--left {
       width: $max-width;

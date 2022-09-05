@@ -16,23 +16,26 @@ const buildGrid = (size) => {
         square.className = "cell";
         container.appendChild(square);
     }
-
     container.style.gridTemplateRows = `repeat(${size}, 1fr`;
     container.style.gridTemplateColumns = `repeat(${size}, 1fr`;
 }
 
 button4x4.onclick = function () {
     buildGrid(4);
+    toggleColorMode();
 };
 
 button8x8.onclick = function () {
     buildGrid(8);
+    toggleColorMode();
 };
 
 button16x16.onclick = function () {
     buildGrid(16);
+    toggleColorMode();
 };
 
 button32x32.onclick = function () {
     buildGrid(32);
+    toggleColorMode();
 };

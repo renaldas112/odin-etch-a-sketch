@@ -76,6 +76,14 @@ main {
     }
 
     &--right {
+      .grid-container {
+        display: grid;
+        .cell {
+          width: 20px;
+          height: 20px;
+          background-color: #fff;
+        }
+      }
     }
   }
 }

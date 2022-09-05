@@ -98,9 +98,11 @@ main .main__container--left .main__buttons-container .slider-text {
 }
 main .main__container--right .grid-container {
   display: grid;
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
 }
 main .main__container--right .grid-container .cell {
-  width: 20px;
-  height: 20px;
   background-color: #fff;
+  border: 1px solid;
 }

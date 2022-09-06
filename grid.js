@@ -8,34 +8,49 @@ const button16x16 = document.querySelector(".grid-16x16");
 
 const button32x32 = document.querySelector(".grid-32x32");
 
-const buildGrid = (size) => {
-    const gridSize = size * size;
+const resetButton = document.querySelector(".reset");
 
-    for (i = 0; i < gridSize; i++) {
-        const square = document.createElement("div");
-        square.className = "cell";
-        container.appendChild(square);
-    }
-    container.style.gridTemplateRows = `repeat(${size}, 1fr`;
-    container.style.gridTemplateColumns = `repeat(${size}, 1fr`;
-}
+const buildGrid = (size) => {
+  const gridSize = size * size;
+
+  for (i = 0; i < gridSize; i++) {
+    const square = document.createElement("div");
+    square.className = "cell";
+    container.appendChild(square);
+  }
+  container.style.gridTemplateRows = `repeat(${size}, 1fr`;
+  container.style.gridTemplateColumns = `repeat(${size}, 1fr`;
+};
+
+// disables buttons after one choice selected
+
+const disableButtonAfterClicked = () => {
+  const BUTTONS = document.getElementsByTagName("button");
+  for (const BUTTON of BUTTONS) {
+    BUTTON.disabled = true;
+  }
+};
 
 button4x4.onclick = function () {
-    buildGrid(4);
-    toggleColorMode();
+  buildGrid(4);
+  toggleColorMode();
+  disableButtonAfterClicked();
 };
 
 button8x8.onclick = function () {
-    buildGrid(8);
-    toggleColorMode();
+  buildGrid(8);
+  toggleColorMode();
+  disableButtonAfterClicked();
 };
 
 button16x16.onclick = function () {
-    buildGrid(16);
-    toggleColorMode();
+  buildGrid(16);
+  toggleColorMode();
+  disableButtonAfterClicked();
 };
 
 button32x32.onclick = function () {
-    buildGrid(32);
-    toggleColorMode();
+  buildGrid(32);
+  toggleColorMode();
+  disableButtonAfterClicked();
 };

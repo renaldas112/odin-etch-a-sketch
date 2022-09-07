@@ -31,25 +31,36 @@ const disableButtonAfterClicked = () => {
   }
 };
 
+//instructions 
+
+const Toggleinstructions = () => {
+  const instructions = document.querySelector(".instructions");
+  instructions.remove();
+}
+
 button4x4.onclick = function () {
+  Toggleinstructions();
   buildGrid(4);
   toggleColorMode();
   disableButtonAfterClicked();
 };
 
 button8x8.onclick = function () {
+  Toggleinstructions();
   buildGrid(8);
   toggleColorMode();
   disableButtonAfterClicked();
 };
 
 button16x16.onclick = function () {
+  Toggleinstructions();
   buildGrid(16);
   toggleColorMode();
   disableButtonAfterClicked();
 };
 
 button32x32.onclick = function () {
+  Toggleinstructions();
   buildGrid(32);
   toggleColorMode();
   disableButtonAfterClicked();

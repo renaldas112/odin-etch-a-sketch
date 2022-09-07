@@ -85,12 +85,28 @@ main {
         display: grid;
         width: 500px;
         height: 500px;
-        background-color: #fff;
+        background-color: #000;
         border: 5px solid #fff;
+        color: #fff;
 
         .cell {
           background-color: #fff;
           border: 1px solid;
+        }
+      }
+
+      .instructions {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 15px;
+        height: 570px;
+
+        .instructions__title {
+          align-self: center;
+          font-size: 2rem;
+          word-spacing: 10px;
+          margin: 0;
         }
       }
     }

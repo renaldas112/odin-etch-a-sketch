@@ -116,10 +116,32 @@ main .main__container--right .grid-container {
   display: grid;
   width: 500px;
   height: 500px;
-  background-color: #fff;
+  background-color: #000;
   border: 5px solid #fff;
+  color: #fff;
 }
 main .main__container--right .grid-container .cell {
   background-color: #fff;
   border: 1px solid;
+}
+main .main__container--right .instructions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-left: 15px;
+  height: 570px;
+}
+main .main__container--right .instructions .instructions__title {
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 2rem;
+  word-spacing: 10px;
+  margin: 0;
 }

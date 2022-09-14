@@ -65,17 +65,13 @@ const toggleColorMode = () => {
     cell.forEach((changeColor) => {
       changeColor.addEventListener("mouseover", (changeColor) => {
         changeColor.target.style.backgroundColor = "#ffffff";
+        container.style.border = "5px solid #ffffff";
       });
     });
   };
 
-  const emptyContainerBorder = () => {
-    container.style.border = `5px solid #ffffff`;
-  };
-
   eraserModeButton.addEventListener("click", function() {
     eraserMode();
-    emptyContainerBorder();
   });
 
   //clear mode

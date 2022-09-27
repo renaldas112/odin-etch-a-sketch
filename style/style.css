@@ -24,6 +24,48 @@ body {
   background: url("../images/background.png");
 }
 
+@media only screen and (max-width: 600px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .main__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main .main__container--left {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .main__buttons-container {
+    width: 75%;
+  }
+  main .main__buttons-container > input[type=color] {
+    width: 100px;
+    height: 100px;
+    margin: 5px 35%;
+  }
+  main .btn {
+    width: 25%;
+  }
+  main .main__container--right {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .grid-container {
+    width: 450px;
+    height: 450px;
+  }
+}
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,19 +76,14 @@ main {
   -webkit-transform: translateY(25%);
           transform: translateY(25%);
 }
-main .main__container {
+
+.main__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
-main .main__container--left {
-  padding: 0 50px;
-}
-main .main__container--left .main__buttons-container {
+
+.main__buttons-container {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -61,7 +98,8 @@ main .main__container--left .main__buttons-container {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-main .main__container--left .main__buttons-container input[type=color] {
+
+input[type=color] {
   -webkit-appearance: none;
   border: none;
   width: 100px;
@@ -69,14 +107,17 @@ main .main__container--left .main__buttons-container input[type=color] {
   border-radius: 50px;
   margin: 5px auto;
 }
-main .main__container--left .main__buttons-container input[type=color]::-webkit-color-swatch-wrapper {
+
+input[type=color]::-webkit-color-swatch-wrapper {
   padding: 0;
 }
-main .main__container--left .main__buttons-container input[type=color]::-webkit-color-swatch {
+
+input[type=color]::-webkit-color-swatch {
   border: none;
   border-radius: 50px;
 }
-main .main__container--left .main__buttons-container .btn {
+
+.btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,7 +138,7 @@ main .main__container--left .main__buttons-container .btn {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-main .main__container--left .main__buttons-container .btn:hover {
+.btn:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0rem, hsl(0deg, 90%, 27%)), color-stop(0.25rem, hsl(0deg, 90%, 27%)), color-stop(0.25rem, transparent), color-stop(transparent), to(hsl(0deg, 70%, 47%))), -webkit-gradient(linear, left top, right top, color-stop(0rem, hsl(0deg, 90%, 27%)), color-stop(0.25rem, hsl(0deg, 90%, 27%)), color-stop(0.25rem, transparent), color-stop(transparent), to(hsl(0deg, 70%, 47%))), hsl(0deg, 80%, 37%);
   background: linear-gradient(180deg, hsl(0deg, 90%, 27%) 0rem, hsl(0deg, 90%, 27%) 0.25rem, transparent 0.25rem, transparent calc(100% - 0.25rem), hsl(0deg, 70%, 47%) calc(100% - 0.25rem)), linear-gradient(90deg, hsl(0deg, 90%, 27%) 0rem, hsl(0deg, 90%, 27%) 0.25rem, transparent 0.25rem, transparent calc(100% - 0.25rem), hsl(0deg, 70%, 47%) calc(100% - 0.25rem)), hsl(0deg, 80%, 37%);
   padding: 3px 0 0 3px;
@@ -106,13 +147,16 @@ main .main__container--left .main__buttons-container .btn:hover {
       -ms-user-select: none;
           user-select: none;
 }
-main .main__container--left .main__buttons-container .btn-size {
+
+.btn-size {
   width: 75px;
 }
-main .main__container--left .main__buttons-container .slider-text {
+
+.slider-text {
   color: #fff;
 }
-main .main__container--right .grid-container {
+
+.grid-container {
   display: grid;
   width: 500px;
   height: 500px;
@@ -120,11 +164,13 @@ main .main__container--right .grid-container {
   border: 5px solid #fff;
   color: #fff;
 }
-main .main__container--right .grid-container .cell {
+
+.cell {
   background-color: #fff;
   border: 1px solid;
 }
-main .main__container--right .instructions {
+
+.instructions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,7 +184,8 @@ main .main__container--right .instructions {
   margin-left: 15px;
   height: 570px;
 }
-main .main__container--right .instructions .instructions__title {
+
+.instructions__title {
   -ms-flex-item-align: center;
       align-self: center;
   font-size: 2rem;
